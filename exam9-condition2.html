@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="edgea" placeholder="Nhập cạnh a" />;
+    <input type="number" id="edgeb" placeholder="Nhập cạnh b" />;
+    <input type="number" id="edgec" placeholder="Nhập cạnh c" />;
+    <button onclick="edge()">Kiểm tra</button>
+    <p id="result"></p>
+
+    <script>
+      function edge() {
+        let a = document.getElementById("edgea").value;
+        let b = document.getElementById("edgeb").value;
+        let c = document.getElementById("edgec").value;
+        if ((a, b, c > 0 && a + b > c && b + c > a && a + c > b)) {
+          result =
+            "cạnh a = " +
+            a +
+            ", cạnh b = " +
+            b +
+            ", cạnh c = " +
+            c +
+            " là 3 cạnh của một tam giác";
+        } else {
+          result =
+            "cạnh a = " +
+            a +
+            ", cạnh b = " +
+            b +
+            ", cạnh c =  " +
+            c +
+            " không là 3 cạnh của một tam giác";
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" id="a" value="" />Nhập số a;<br />
+      <input type="number" id="b" value="" />Nhập số b;<br />
+      <input type="button" value="Đáp án" onclick="pt()" />
+    </form>
+    <script>
+      function pt() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        a = parseInt(a);
+        b = parseInt(b);
+        if (a == 0 && b == 0) {
+          document.write("Phương trình có vô số nghiệm");
+        } else if (a == 0 && b != 0) {
+          document.write("Phương trình vô nghiệm");
+        } else if (a != 0 && b == 0) {
+          document.write("Phương trình có nghiệm x = 0");
+        } else {
+          document.write("Phương trình có nghiệm x = " + -b / a);
+        }
+      }
+    </script>
+  </body>
+</html>
